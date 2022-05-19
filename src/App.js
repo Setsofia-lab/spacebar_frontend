@@ -15,6 +15,9 @@ function App() {
       { phone: phone, email: email },
       { headers: { "content-type": "application/json" } }
     );
+
+    setEmail("");
+    setPhone("");
   };
 
   return (
