@@ -11,7 +11,7 @@ function App() {
   const sendData = async (e) => {
     e.preventDefault();
     await axios.post(
-      "http://localhost:3000",
+      "https://spacebarapi.herokuapp.com",
       { phone: phone, email: email },
       { headers: { "content-type": "application/json" } }
     );
