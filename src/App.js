@@ -45,7 +45,10 @@ function App() {
                   to earn extra income
                 </h1>
                 <p>
-                  Rent unique and affordable spaces for your events. <br />
+                  Rent unique and affordable spaces for your events - parties,{" "}
+                  <br />
+                  weddings ceremonies, corporate events, networking events, etc{" "}
+                  <br />
                   Enter your email and phone number to receive <br /> updates on
                   our services
                 </p>
