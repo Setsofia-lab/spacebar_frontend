@@ -9,14 +9,14 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 5%;
 }
 
 .header > img {
   height: 75px;
   width: 150px;
   object-fit: contain;
-  margin-left: 50px;
+  /* margin-left: 50px; */
 }
 .navigation {
   display: flex;
@@ -85,7 +85,7 @@
   display: flex;
   /* flex-wrap: wrap; */
   flex-direction: row;
-  margin-top: 50px;
+  margin-top: 5%;
 }
 
 .bodycontainer > img {
@@ -97,17 +97,17 @@
 
 .content {
   width: 100%;
-  padding: 0px 100px 0px 100px;
+  /* padding: 0px 100px 0px 100px; */
 }
 
 .form {
   display: flex;
-  width: 400px;
+  width: 90%;
   flex-direction: column;
 }
 
 .form > input {
-  margin-top: 30px;
+  margin-top: 5%;
   border-radius: 10px;
   height: 40px;
   padding-left: 10px;
@@ -129,32 +129,4 @@
 .form input {
   border-color: #ff5a60;
   box-sizing: border-box;
-}
-
-@media screen and (max-width: 1283px) {
-  .bodycontainer > img {
-    width: 560px;
-    height: 350px;
-  }
-}
-
-@media screen and (max-width: 1157px) {
-  .bodycontainer > img {
-    width: 400px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .bodycontainer {
-    width: 100%;
-    /* flex-direction: column; */
-    flex-wrap: wrap;
-  }
-
-  .content {
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-  }
 }
