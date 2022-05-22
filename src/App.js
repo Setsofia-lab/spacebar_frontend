@@ -3,27 +3,27 @@ import axios from "axios";
 import "./homestyle.css";
 import "bootstrap/dist/css/bootstrap.css";
 import img1 from "./assets/M2.jpg";
-import logo from "./assets/Spacebar logo (1).svg";
+import logo from "./assets/Spacebar.svg";
 
 function App() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
 
-  // const sendData = async (e) => {
-  //   e.preventDefault();
-  //   await axios.post(
-  //     "https://spacebarapi.herokuapp.com",
-  //     { phone: phone, email: email },
-  //     { headers: { "content-type": "application/json" } }
-  //   );
+  const sendData = async (e) => {
+    e.preventDefault();
+    await axios.post(
+      "https://spacebarapi.herokuapp.com",
+      { phone: phone, email: email },
+      { headers: { "content-type": "application/json" } }
+    );
 
-  //   setEmail("");
-  //   setPhone("");
-  // };
+    setEmail("");
+    setPhone("");
+  };
 
   return (
     <div className="container">
-      <div class="header">
+      <div className="header">
         <img alt="logo" src={logo} />
         <nav className="navigation">
           <p>Home</p>
@@ -31,7 +31,7 @@ function App() {
           <p>Blog</p>
           <p>Explore</p>
         </nav>
-        <button class="btn">Contact Us</button>
+        <button clasName="btn">Contact Us</button>
       </div>
 
       {/* end of header */}
@@ -39,7 +39,7 @@ function App() {
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-6">
-              <div class="content">
+              <div className="content">
                 <h1 className="text-bold">
                   List your available spaces <br />
                   to earn extra income
@@ -64,7 +64,7 @@ function App() {
 
                   <input
                     type="tel"
-                    class="form-control"
+                    className="form-control"
                     id="tel"
                     placeholder="Enter phone number"
                     name="tel"
