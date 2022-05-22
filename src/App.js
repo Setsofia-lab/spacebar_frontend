@@ -9,17 +9,17 @@ function App() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
 
-  const sendData = async (e) => {
-    e.preventDefault();
-    await axios.post(
-      "https://spacebarapi.herokuapp.com",
-      { phone: phone, email: email },
-      { headers: { "content-type": "application/json" } }
-    );
+  // const sendData = async (e) => {
+  //   e.preventDefault();
+  //   await axios.post(
+  //     "https://spacebarapi.herokuapp.com",
+  //     { phone: phone, email: email },
+  //     { headers: { "content-type": "application/json" } }
+  //   );
 
-    setEmail("");
-    setPhone("");
-  };
+  //   setEmail("");
+  //   setPhone("");
+  // };
 
   return (
     <div className="container">
