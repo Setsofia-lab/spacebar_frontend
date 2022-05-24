@@ -11,11 +11,18 @@ function App() {
 
   const sendData = async (e) => {
     e.preventDefault();
-    await axios.post(
-      "https://spacebarapi.herokuapp.com",
-      { phone: phone, email: email },
-      { headers: { "content-type": "application/json" } }
-    );
+    await axios
+      .post(
+        "https://spacebarapi.herokuapp.com/",
+        { phone: phone, email: email },
+        { headers: { "Content-type": "application/json" } }
+      )
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
 
     setEmail("");
     setPhone("");
@@ -26,12 +33,9 @@ function App() {
       <div className="header">
         <img alt="logo" src={logo} />
         <nav className="navigation">
-          <p>Home</p>
-          <p>About</p>
-          <p>Blog</p>
-          <p>Explore</p>
+          <p> Email: friends@ourspacebar.com </p>
+          <p> Tel: 0505715339/0200498056 </p>
         </nav>
-        <button clasName="btn">Contact Us</button>
       </div>
 
       {/* end of header */}
