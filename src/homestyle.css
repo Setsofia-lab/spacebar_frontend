@@ -125,7 +125,7 @@
   border: none;
   font-weight: bolder;
 }
-.btn mb-2:hover {
+.form > button:hover {
   background-color: blue;
 }
 
