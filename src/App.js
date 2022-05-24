@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./homestyle.css";
 import "bootstrap/dist/css/bootstrap.css";
@@ -8,20 +8,30 @@ import logo from "./assets/Spacebar.svg";
 function App() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    setTimeout(() => {
+      setSuccessMessage("");
+      setError("");
+    }, 5000);
+  }, [error, successMessage]);
 
   const sendData = async (e) => {
     e.preventDefault();
     await axios
       .post(
-        "https://spacebarapi.herokuapp.com/",
+        // "https://spacebarapi.herokuapp.com/",
+        "http://localhost:3000/",
         { phone: phone, email: email },
         { headers: { "Content-type": "application/json" } }
       )
       .then((response) => {
-        console.log(response);
+        setSuccessMessage(response);
       })
       .catch((err) => {
-        console.log(err);
+        setError(err);
       });
 
     setEmail("");
@@ -81,6 +91,13 @@ function App() {
                   <button className="btn mb-2" id="btn" onClick={sendData}>
                     Join Waitlist
                   </button>
+                  {successMessage && (
+                    <p>
+                      You have successfully joined the waitlist. Look out for
+                      SpaceBar!
+                    </p>
+                  )}
+                  {error && <p>There was an error with your request</p>}
                 </form>
               </div>
             </div>
