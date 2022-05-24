@@ -22,8 +22,8 @@ function App() {
     e.preventDefault();
     await axios
       .post(
-        // "https://spacebarapi.herokuapp.com/",
-        "http://localhost:3000/",
+        "https://spacebarapi.herokuapp.com/",
+        // "http://localhost:3000/",
         { phone: phone, email: email },
         { headers: { "Content-type": "application/json" } }
       )
